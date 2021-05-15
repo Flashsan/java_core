@@ -1,0 +1,46 @@
+ System.out.println(
+                        "Which abstractCar do you prefer to buy?" + "\n" +
+                                "Passenger or Sport abstractCar?"
+                );
+
+                System.out.println(
+                        "1 - Passenger abstractCar " + "\n" +
+                                "2 - Sport abstractCar"
+                );
+
+                int selectCar = scanner.nextInt();
+                switch (selectCar) {
+                    case 1:
+                        PassengerCar passengerCar = salon.createNewAudiPassengerCar
+                                (
+                                        audiCarFactory,
+                                        AudiColor.BLACK_GOLD.getAudiColor(),
+                                        AudiModel.AUDI_A4.getAudiModel(),
+                                        AudiDiameterWheel.EIGHTEENTH.getAudiDiameterWheel(),
+                                        AudiVolumeEngine.TWO_AND_ZERO.getAudiVolumeEngine()
+                                );
+                        break;
+                    case 2:
+
+                        SportCar sportCar1 = salon.createNewAudiSportCar(audiCarFactory,
+                                AudiColor.BLACK_GOLD.getAudiColor(),
+                                AudiModel.AUDI_A4.getAudiModel(),
+                                AudiDiameterWheel.EIGHTEENTH.getAudiDiameterWheel(),
+                                AudiVolumeEngine.TWO_AND_ZERO.getAudiVolumeEngine(),
+                                2, 1600);
+
+                        sportCar1.info();
+                        break;
+                    default:
+
+                }
+
+                break;
+
+            default:
+                System.out.println("Try again");
+
+
+
+                break;
+        }
